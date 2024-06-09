@@ -1,81 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-    <meta char="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width-device-width,initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></href>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-<body>
-    <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-
-        <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skill">Skill</a>
-        <!-- <a href="#">Portfolio</a> -->
-        <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <section id="home" class="home">
-        <div class="home-content">
-            <h3>Hello,It's Me</h3>
-            <h1>Swapna Alladi</h1>
-            <h3>I'm a <span class="text"></span></h3>
-               <p>Student at Gitam University
-               <br>And Interested in Website designing,Software Development.
-               <br>Looking for new oppurtunities !</p></div>
-               
-    </div>
-    <div class="img-box">
-        <img src="icon.jpg" alt="image">
-    </div>
-    </section>
-    <section id="about" class="about">
-        <div class="about-content">
-        <h2 class="heading">About<span>Me</span></h2>
-        <h3>Web Designing</h3>
-        <p> I am a passionate and enthusiastic individual with a keen interest in web designing. I have recently completed my studies and am now eager to step into the professional world, looking for new opportunities to kick-start my career as a fresher. My journey into web design began during my academic years, where I was captivated by the blend of creativity and technology that web design offers.
-            <br>I am looking forward to bringing my fresh perspective, dedication, and enthusiasm to a dynamic team, and to embark on a journey of continuous learning and professional growth in the field of web design.
-        </p>
-        <a href="#" class="btn-box">Experience</a>
-
-        </div>
-    </section>
-    <section id="skill" class="skill">
-        <div class="skill-content">
-            <h2 class="heading"> My Skills</h2>
-            <h4>Software Testing  <input type="range" min="{0}" max="100" value="50" class="range range-accent"/><br/>
-               Java Programming   <input type="range" min="{0}" max="100" value="60" class="range"/><br/>
-               Web Designing   <input type="range" min="{0}" max="100" value="80" class="range"/><br/>
-               Python basics   <input type="range" min="{0}" max="100" value="40" class="range"/></div>
-               
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display">                       
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice
+                        (0,-1)" class="operator">
+                        <input type="button" value="." onclick="display.value += '.' " class="operator">
+                        <input type="button" value="/" onclick="display.value += '/' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="*" onclick="display.value += '*' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="display.value += '00' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+                    </div>
+                </form>
+            </div>
         </div>
 
-    </section>
-    <section id="contact" class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/alladi-swapna-1a1066224/"><i class='bx bxl-linkedin'></i></a>
-            <a href="#"><i class='bx bxl-whatsapp' ></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
-            <a href="#"><i class='bx bxl-twitter' ></i></a>
-        </div>
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Privacy Policy </a>
-            </li>
-        </ul>
-    </section>
-    
     </body>
 </html>
